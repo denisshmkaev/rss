@@ -82,7 +82,7 @@ class ParseCommand extends Command
         return [
             'request_url'    => $info['url'],
             'request_method' => $method,
-            'response_body'  => $response ?? 'No body',
+            'response_body'  => $response ?? 'No data',
             'created_at'     => new DateTime(),
             'response_code'  => $info['http_code']
         ];
@@ -145,10 +145,10 @@ class ParseCommand extends Command
                 $this->em->persist($news_item);
             }
             $this->em->flush();
-            return true;
+            return Command::SUCCESS;
         } catch (\Exception $e){
             error_log($this->date->format('Y-m-d H:i:s') . ' : ' .$e->getMessage() . PHP_EOL, 3, $this->error_file);
-            return false;
+            return Command::FAILURE;
         }
 
     }

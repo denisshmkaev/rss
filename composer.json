@@ -10,7 +10,7 @@
         "doctrine/doctrine-bundle": "^2.3",
         "doctrine/doctrine-migrations-bundle": "^2.2",
         "doctrine/orm": "^2.7",
-        "easycorp/easyadmin-bundle": "^3",
+        "easycorp/easyadmin-bundle": "^3.2",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/console": "5.2.*",
         "symfony/dotenv": "5.2.*",
